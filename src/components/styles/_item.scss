@@ -1,0 +1,11 @@
+.item {
+    height: 75px;
+    width: 314px;
+    display: grid;
+    grid-template-columns: 75px 239px;
+    grid-template-rows: 75px;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,142 @@
+@import "../../styles/assets/modules/globals";
+@import "../../styles/assets/modules/variables";
+@import "../../styles/assets/modules/mixins";
+
+/* ====================================================================================================================
+ *                          HEADER
+ * ====================================================================================================================*/
+
+.header {
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $color-main;
+    &__img {
+        position: relative;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        &--logo {
+            position: absolute;
+            z-index: 3;
+            width: 18rem;
+            rotate: -10deg;
+        }
+    }
+    &__menu {
+        display: flex;
+        padding: 0rem 2rem;
+        &--links {
+            align-self: center;
+        }
+        &--links a {
+            margin-right: 2rem;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: $color-btn;
+            &:hover {
+                border-bottom: 3px solid $color-hover;
+                color: $color-hover;
+            }
+        }
+        &__user {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+            &--icons {
+                display: flex;
+                align-items: center;
+            }
+            &--icons {
+                &--fa {
+                    margin: 0 1rem;
+                    color: #ffffff;
+                    font-size: 1.7rem;
+                    transition: all 0.2s ease-out;
+                    cursor: pointer;
+                    &:hover {
+                        @include hover-icons;
+                    }
+                }
+            }
+            .fa-bars {
+                display: none;
+            }
+        }
+        &__hambur {
+            position: absolute;
+            right: 525px;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            max-height: 100vh;
+            transform: translateX(-1400px);
+            transition: transform 0.5s ease-in-out;
+            background-color: $color-light;
+            opacity: 0.9;
+            box-shadow: 1px 3px 6px 1px rgb(116, 116, 116);
+            &__top {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0.7rem;
+                img {
+                    width: 6rem;
+                }
+                &--fa {
+                    font-size: 1.3rem;
+                    cursor: pointer;
+                }
+            }
+            &--search {
+                display: flex;
+                justify-content: center;
+                margin: 1rem 0;
+                input {
+                    width: 10rem;
+                    height: 33px;
+                    padding: 0 5px;
+                    margin: 0 1rem;
+                    border-radius: 8px;
+                    font-size: 0.8rem;
+                }
+                &--lens {
+                    position: relative;
+                    right: 35px;
+                    top: 10px;
+                    opacity: 0.4;
+                }
+            }
+            &__menu {
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                padding: 1rem 1.5rem;
+                a {
+                    margin-bottom: 0.9rem;
+                    text-decoration: none;
+                    color: $color-main;
+                    font-weight: bold;
+                    transition: 450ms all;
+                    &:hover {
+                        border-bottom: 3px solid $color-btn;
+                        color: $color-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.show {
+    transform: translateX(-40px);
+    position: fixed;
+}
+
+.fa-times:hover {
+    @include hover-icons;
+}

@@ -1,0 +1,55 @@
+@import "../../../styles/assets/modules/globals";
+@import "../../../styles/assets/modules/variables";
+
+.old_methods {
+    font-size: 1.5em;
+    .title_method {
+        margin-bottom: 15px;
+    }
+    .methods {
+        font-size: 0.75em;
+        font-weight: bold;
+        ul {
+            height: 185px;
+            overflow-y: scroll;
+            a {
+                display: grid;
+                grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+                align-items: center;
+                height: 41px;
+                margin-bottom: 20px;
+                border: 0.5px solid rgba($color-main, $alpha: 0.25);
+                border-radius: 25px;
+                input {
+                    margin: 0 auto;
+                    height: 20px;
+                    width: 20px;
+                    background-color: transparent;
+                }
+            }
+            input {
+                background-color: $color-btn;
+            }
+            input:hover {
+                background-color: $color-btn;
+            }
+            img {
+                margin: 0 auto;
+                height: inherit;
+            }
+            p {
+                margin: 0 auto;
+            }
+            p:last-child {
+                margin-left: 0;
+                font-size: 0.5em;
+            }
+        }
+        .paypal {
+            grid-column: 2 / 5;
+        }
+        a:hover {
+            background-color: $color-btn;
+        }
+    }
+}

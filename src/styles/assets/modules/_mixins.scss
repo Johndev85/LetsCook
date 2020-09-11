@@ -1,0 +1,32 @@
+/* ====================================================================================================================
+ *  MIXINS  SASS
+ * ====================================================================================================================*/
+
+@mixin hover-icons {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2);
+    color: $color-btn;
+}
+
+@mixin hover-btn {
+    transform: scale(1.1);
+    color: $color-hover;
+    box-shadow: 1px 3px 9px 1px rgb(116, 116, 116);
+}
+
+@mixin btn-text-format {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-main;
+    transition: 400ms all;
+}
+
+@mixin btn-styles {
+    text-align: center;
+    transition: 450ms ease-in;
+    margin: 3rem;
+    padding: 1.3rem;
+    background-color: $color-btn;
+    border-radius: 5px;
+}

@@ -1,0 +1,815 @@
+@import "./globals";
+@import "./variables";
+
+$color-main: #264653;
+$color-btn: #e9c46a;
+$color-hover: #2a9d8f;
+$color-light: #dbe4ee;
+$color-backgroud: #ffffff;
+$debug-border: 1px solid red;
+$textFont: "Roboto Mono", monospace;
+$titleFont: "Roboto Condensed", sans-serif;
+@mixin liImagesStyle {
+    width: 100%;
+    height: inherit;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+@mixin liTextStyle {
+    font-family: $titleFont;
+    font-size: 18px;
+}
+
+@mixin liTextStyle1024 {
+    font-family: $titleFont;
+    font-size: 30px;
+}
+
+@mixin titleStyle {
+    text-align: center;
+    color: $color-main;
+    font-size: 30px;
+}
+
+@mixin titleStyle1024 {
+    text-align: center;
+    color: $color-main;
+    font-size: 50px;
+}
+
+@mixin subtitleStyle {
+    text-align: center;
+    color: $color-main;
+    font-size: 25px;
+}
+
+@mixin subtitleStyle1024 {
+    text-align: center;
+    color: $color-main;
+    font-size: 50px;
+}
+
+@mixin ingredientStepStyle {
+    width: 100%;
+    height: 90%;
+    background-color: $color-backgroud;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+}
+
+@mixin ingredientStepStyle1024 {
+    width: 95%;
+    height: 90%;
+    margin: 0 auto;
+    background-color: $color-backgroud;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+}
+
+@mixin ingredientsReciepeImagesStyle {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: center;
+    justify-self: center;
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+@mixin ingredientsReciepeImagesStyle1024 {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: center;
+    justify-self: center;
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+@mixin ingredientNameStyle {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: $titleFont;
+    font-size: 20px;
+    color: $color-main;
+}
+
+@mixin ingredientNameStyle1024 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: $titleFont;
+    font-size: 40px;
+    color: $color-main;
+}
+
+@mixin ingredientQuantityStyle {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: $textFont;
+    font-size: 15px;
+    color: $color-main;
+}
+
+@mixin ingredientQuantityStyle1024 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: $textFont;
+    font-size: 35px;
+    color: $color-main;
+}
+
+@mixin stepStyle {
+    width: 100%;
+    height: 100%;
+    background-color: $color-backgroud;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+@mixin stepStyleParagraph {
+    width: auto;
+    height: 100%;
+    margin-right: 5px;
+    text-align: justify;
+    margin-left: 5px;
+    font-family: $textFont;
+    font-size: 15px;
+    color: $color-main;
+}
+
+@mixin stepStyleParagraph1024 {
+    width: auto;
+    height: 100%;
+    margin-right: 5px;
+    text-align: justify;
+    margin-left: 5px;
+    font-family: $textFont;
+    font-size: 30px;
+    color: $color-main;
+}
+
+/*------------------------------MAIN------------------------------*/
+
+.main-details {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/*------------------------------MAIN IMAGE------------------------------*/
+
+.main-details .main-image {
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+}
+
+.main-image img {
+    border-radius: 3%;
+    width: 100%;
+    height: 100%;
+}
+
+/*------------------------------MAIN INTRODUCTION------------------------------*/
+
+.main-details .main-introduction {
+    width: 100%;
+    margin-top: 20px;
+    margin: 0 auto;
+    display: grid;
+    /* grid-template-rows: repeat(5, 20%); */
+    grid-template-rows: 17.5% 17.5% 17.5% 30% 17.5%;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.main-introduction h1 {
+    width: 100%;
+    @include titleStyle;
+    grid-row: 1/2;
+    grid-column: 2/4;
+    align-self: center;
+}
+
+.main-introduction h2 {
+    width: 100%;
+    @include subtitleStyle;
+    grid-row: 2/3;
+    grid-column: 2/4;
+    align-self: center;
+}
+
+.main-introduction .main_introduction__people {
+    width: 100%;
+    color: $color-main;
+    font-size: 20px;
+    text-align: center;
+    grid-row: 3/4;
+    grid-column: 2/3;
+    align-self: center;
+}
+
+.main-introduction .main-introduction__peopleIcon {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-introduction .main_introduction__time {
+    width: 100%;
+    color: $color-main;
+    font-size: 20px;
+    text-align: center;
+    grid-row: 3/4;
+    grid-column: 3/4;
+    align-self: center;
+}
+
+.main-introduction .main-introduction__timerIcon {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-introduction p {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 20px;
+    text-align: justify;
+    color: $color-main;
+    grid-row: 4/5;
+    grid-column: 1/5;
+}
+
+.main-introduction .main-introduction__loveIcon {
+    width: 25px;
+    height: 25px;
+    background-image: url(https://i.imgur.com/ZUwFgu0.png);
+    background-size: contain;
+    grid-row: 5/6;
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.main-introduction .main-introduction__shareIcon {
+    width: 25px;
+    height: 25px;
+    background-image: url(https://i.imgur.com/Xm5K9xL.png);
+    background-size: contain;
+    grid-row: 5/6;
+    grid-column: 3/4;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+/*------------------------------MAIN INGREDIENTS------------------------------*/
+
+.main-details .main-ingredients {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 15px;
+}
+
+.main-ingredients .main-ingredients__container1 {
+    @include ingredientStepStyle;
+}
+
+.main-ingredients__container1 .main-ingredients__image {
+    background-image: url(https://i.imgur.com/FaeMCS1.jpg);
+    @include ingredientsReciepeImagesStyle;
+}
+
+.main-ingredients__container1 .main-ingredientes__name {
+    @include ingredientNameStyle;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.main-ingredients__container1 .main-ingredients__quantity {
+    @include ingredientQuantityStyle;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.main-ingredients .main-ingredients__container2 {
+    @include ingredientStepStyle;
+}
+
+.main-ingredients__container2 .main-ingredients__image {
+    background-image: url(https://i.imgur.com/pWBcZYu.jpg);
+    @include ingredientsReciepeImagesStyle;
+}
+
+.main-ingredients__container2 .main-ingredientes__name {
+    @include ingredientNameStyle;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.main-ingredients__container2 .main-ingredients__quantity {
+    @include ingredientQuantityStyle;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.main-ingredients .main-ingredients__container3 {
+    @include ingredientStepStyle;
+}
+
+.main-ingredients__container3 .main-ingredients__image {
+    background-image: url(https://i.imgur.com/Nie87y0.jpg);
+    @include ingredientsReciepeImagesStyle;
+}
+
+.main-ingredients__container3 .main-ingredientes__name {
+    @include ingredientNameStyle;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.main-ingredients__container3 .main-ingredients__quantity {
+    @include ingredientQuantityStyle;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.main-ingredients .main-ingredients__container4 {
+    @include ingredientStepStyle;
+}
+
+.main-ingredients__container4 .main-ingredients__image {
+    background-image: url(https://i.imgur.com/oshniVt.jpg);
+    @include ingredientsReciepeImagesStyle;
+}
+
+.main-ingredients__container4 .main-ingredientes__name {
+    @include ingredientNameStyle;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.main-ingredients__container4 .main-ingredients__quantity {
+    @include ingredientQuantityStyle;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.main-ingredients .main-ingredients__container5 {
+    @include ingredientStepStyle;
+}
+
+.main-ingredients__container5 .main-ingredients__image {
+    background-image: url(https://i.imgur.com/QVQg69D.jpg);
+    @include ingredientsReciepeImagesStyle;
+}
+
+.main-ingredients__container5 .main-ingredientes__name {
+    @include ingredientNameStyle;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.main-ingredients__container5 .main-ingredients__quantity {
+    @include ingredientQuantityStyle;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.main-ingredients .main-ingredients__container6 {
+    @include ingredientStepStyle;
+}
+
+.main-ingredients__container6 .main-ingredients__image {
+    background-image: url(https://i.imgur.com/eq2wjLQ.jpg);
+    @include ingredientsReciepeImagesStyle;
+}
+
+.main-ingredients__container6 .main-ingredientes__name {
+    @include ingredientNameStyle;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.main-ingredients__container6 .main-ingredients__quantity {
+    @include ingredientQuantityStyle;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.main-ingredients .main-ingredients__container7 {
+    @include ingredientStepStyle;
+}
+
+.main-ingredients__container7 .main-ingredients__image {
+    background-image: url(https://i.imgur.com/PCue0dC.jpg);
+    @include ingredientsReciepeImagesStyle;
+}
+
+.main-ingredients__container7 .main-ingredientes__name {
+    @include ingredientNameStyle;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.main-ingredients__container7 .main-ingredients__quantity {
+    @include ingredientQuantityStyle;
+}
+
+.main-details .main-steps {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+.main-steps h1 {
+    width: 100%;
+    @include titleStyle;
+}
+
+.main-steps .main-steps__container {
+    @include stepStyle;
+}
+
+.main-steps__container p {
+    @include stepStyleParagraph;
+}
+
+.main-details .main-rate {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-rate h1 {
+    margin-top: 0;
+    width: 100%;
+    @include titleStyle;
+    text-align: center;
+}
+
+.main-rate .main-rate__icons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-rate__icons a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.main-details .main-addTo {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-addTo button {
+    width: 60%;
+    height: 50px;
+    margin: 0 auto;
+    border: transparent;
+    outline: none;
+    border-radius: 15px;
+    background-color: $color-btn;
+    color: $color-main;
+    font-family: $textFont;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main-addTo button:hover {
+    background-color: $color-hover;
+    color: $color-light;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 1024px) {
+    .header-details {
+        width: 100%;
+        height: 100px;
+    }
+    .header-container .header-container__image {
+        height: 100%;
+    }
+    .header-container .header-container__search {
+        @include liTextStyle1024;
+    }
+    .header-container .header-container__explore {
+        @include liTextStyle1024;
+    }
+    .header-container .header-container__faq {
+        @include liTextStyle1024;
+    }
+    .header-container .header-container__userName {
+        @include liTextStyle1024;
+    }
+    .header-container .header-container__icon {
+        width: 30px;
+        height: 25px;
+    }
+    .main-details {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main-details .main-image {
+        width: 100%;
+        height: 50%;
+        margin-top: 10px;
+    }
+    .main-introduction h1 {
+        @include subtitleStyle1024;
+    }
+    .main-introduction h2 {
+        @include subtitleStyle1024;
+    }
+    .main-introduction .main_introduction__people {
+        font-size: 40px;
+    }
+    .main-introduction .main-introduction__peopleIcon {
+        width: 30px;
+        height: 30px;
+    }
+    .main-introduction .main_introduction__time {
+        font-size: 40px;
+    }
+    .main-introduction .main-introduction__timerIcon {
+        width: 30px;
+        height: 30px;
+    }
+    .main-introduction p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 35px;
+    }
+    .main-introduction .main-introduction__loveIcon {
+        width: 40px;
+        height: 40px;
+    }
+    .main-introduction .main-introduction__shareIcon {
+        width: 40px;
+        height: 40px;
+    }
+    .main-details .main-ingredients {
+        width: 95%;
+    }
+    .main-ingredients .main-ingredients__container1 {
+        @include ingredientStepStyle1024;
+    }
+    .main-ingredients__container1 .main-ingredients__image {
+        @include ingredientsReciepeImagesStyle1024;
+    }
+    .main-ingredients__container1 .main-ingredientes__name {
+        @include ingredientNameStyle1024;
+    }
+    .main-ingredients__container1 .main-ingredients__quantity {
+        @include ingredientQuantityStyle1024;
+    }
+    .main-ingredients .main-ingredients__container2 {
+        @include ingredientStepStyle1024;
+    }
+    .main-ingredients__container2 .main-ingredients__image {
+        @include ingredientsReciepeImagesStyle1024;
+    }
+    .main-ingredients__container2 .main-ingredientes__name {
+        @include ingredientNameStyle1024;
+    }
+    .main-ingredients__container2 .main-ingredients__quantity {
+        @include ingredientQuantityStyle1024;
+    }
+    .main-ingredients .main-ingredients__container3 {
+        @include ingredientStepStyle1024;
+    }
+    .main-ingredients__container3 .main-ingredients__image {
+        @include ingredientsReciepeImagesStyle1024;
+    }
+    .main-ingredients__container3 .main-ingredientes__name {
+        @include ingredientNameStyle1024;
+    }
+    .main-ingredients__container3 .main-ingredients__quantity {
+        @include ingredientQuantityStyle1024;
+    }
+    .main-ingredients .main-ingredients__container4 {
+        @include ingredientStepStyle1024;
+    }
+    .main-ingredients__container4 .main-ingredients__image {
+        @include ingredientsReciepeImagesStyle1024;
+    }
+    .main-ingredients__container4 .main-ingredientes__name {
+        @include ingredientNameStyle1024;
+    }
+    .main-ingredients__container4 .main-ingredients__quantity {
+        @include ingredientQuantityStyle1024;
+    }
+    .main-ingredients .main-ingredients__container5 {
+        @include ingredientStepStyle1024;
+    }
+    .main-ingredients__container5 .main-ingredients__image {
+        @include ingredientsReciepeImagesStyle1024;
+    }
+    .main-ingredients__container5 .main-ingredientes__name {
+        @include ingredientNameStyle1024;
+    }
+    .main-ingredients__container5 .main-ingredients__quantity {
+        @include ingredientQuantityStyle1024;
+    }
+    .main-ingredients .main-ingredients__container6 {
+        @include ingredientStepStyle1024;
+    }
+    .main-ingredients__container6 .main-ingredients__image {
+        @include ingredientsReciepeImagesStyle1024;
+    }
+    .main-ingredients__container6 .main-ingredientes__name {
+        @include ingredientNameStyle1024;
+    }
+    .main-ingredients__container6 .main-ingredients__quantity {
+        @include ingredientQuantityStyle1024;
+    }
+    .main-ingredients .main-ingredients__container7 {
+        @include ingredientStepStyle1024;
+    }
+    .main-ingredients__container7 .main-ingredients__image {
+        @include ingredientsReciepeImagesStyle1024;
+    }
+    .main-ingredients__container7 .main-ingredientes__name {
+        @include ingredientNameStyle1024;
+    }
+    .main-ingredients__container7 .main-ingredients__quantity {
+        @include ingredientQuantityStyle1024;
+    }
+    .main-details .main-steps {
+        width: 90%;
+    }
+    .main-steps h1 {
+        @include titleStyle1024;
+    }
+    .main-steps__container p {
+        @include stepStyleParagraph1024;
+    }
+    .main-rate h1 {
+        @include titleStyle1024;
+    }
+    .main-rate__icons a {
+        width: 60px;
+        height: 60px;
+    }
+    .main-addTo button {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        border: transparent;
+        outline: none;
+        border-radius: 15px;
+        background-color: $color-btn;
+        color: $color-main;
+        font-family: $textFont;
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header-details {
+        width: 100%;
+        height: 50px;
+        background-color: $color-light;
+        margin: 0;
+        padding: 0;
+    }
+    nav .header-container {
+        width: 100%;
+        height: inherit;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        align-items: center;
+        justify-items: center;
+    }
+    .header-container .header-container__image {
+        @include liImagesStyle;
+        background-image: url(https://i.imgur.com/QBfmhPH.png);
+        grid-column: 1/2;
+    }
+    .header-container .header-container__search,
+    .header-container__explore,
+    .header-container__faq,
+    .header-container__userName {
+        display: none;
+    }
+    .header-container .header-container__icon {
+        width: 50%;
+        height: 25px;
+        cursor: pointer;
+        background-image: url(https://i.imgur.com/KBgdLuE.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-column: 2/3;
+    }
+    .header-container a {
+        display: none;
+    }
+    .main-details {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main-details .main-image {
+        width: 100%;
+        height: 50%;
+        margin-top: 10px;
+    }
+    .main-details .main-introduction {
+        width: 100%;
+        margin-top: 20px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 16.25% 16.25% 16.25% 35% 16.25%;
+        grid-template-columns: repeat(4, 25%);
+    }
+    .main-introduction h2 {
+        width: 100%;
+        @include subtitleStyle;
+        grid-row: 2/3;
+        grid-column: 1/5;
+        align-self: center;
+    }
+    .main-introduction p {
+        width: 96%;
+        height: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        text-align: justify;
+        color: $color-main;
+        grid-row: 4/5;
+        grid-column: 1/5;
+    }
+    .main-details .main-ingredients {
+        width: 95%;
+    }
+    .main-details .main-steps {
+        width: 95%;
+        margin-top: 10px;
+    }
+    .main-details .main-addTo {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-bottom: 10%;
+    }
+    .main-addTo button {
+        width: 80%;
+    }
+}

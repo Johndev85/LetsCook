@@ -1,0 +1,45 @@
+@import '../../../styles/assets/modules/globals';
+@import '../../../styles/assets/modules/variables';
+
+.card {
+  display: grid;
+  padding: 25px 2.5%;
+  align-items: center;
+  width: 375px;
+  height: 812px;
+  a {
+    display: flex;
+    text-decoration: none;
+    color: $color-main;
+    &.button,
+    &.add_card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 41px;
+      font-family: $font-titles;
+      font-weight: 700;
+      background-color: $color-btn;
+      color: $color-main;
+      border-color: $color-main;
+      border-radius: 25px;
+    }
+  }
+  input {
+    display: flex;
+    align-items: center;
+    height: 41px;
+    border-radius: 25px;
+    border: 0.5px solid rgba($color-main, $alpha: 0.25);
+    background-color: transparent;
+    &::placeholder {
+      text-align: center;
+      font-weight: 500;
+      color: $color-main;
+    }
+    &:last-child {
+      align-items: center;
+      font-size: 20px;
+    }
+  }
+}

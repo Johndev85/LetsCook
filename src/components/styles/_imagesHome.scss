@@ -1,0 +1,327 @@
+@import "../../styles/assets/modules/globals";
+@import "../../styles/assets/modules/variables";
+
+.background-square {
+    position: absolute;
+    width: 212px;
+    height: -webkit-fill-available;
+    background-color: rgba(233, 196, 106, 0.64);
+    z-index: 2;
+    left: 8em;
+    filter: blur(5px);
+}
+
+.logo-home {
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    background-image: url('/src/styles/assets/images/Logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: -1.5em;
+    z-index: 3;
+    filter: none;
+}
+
+.img-1 {
+    position: absolute;
+    width: 13em;
+    height: 13em;
+    background-image: url(https://gourmet.com.co/wp-content/uploads/2020/04/Toque-Gourmet-Receta-01.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 10em;
+    left: 12em;
+    z-index: 3;
+    filter: blur(3px);
+}
+
+.img-2 {
+    position: absolute;
+    width: 13em;
+    height: 13em;
+    background-image: url(https://sandersonfarms.com/wp-content/uploads/2017/04/Recipes_Creamy_Chicken_Pasta_Hero_709x758-1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 19em;
+    left: 0em;
+    z-index: 3;
+    filter: blur(3px);
+}
+
+.img-3 {
+    position: absolute;
+    width: 13em;
+    height: 13em;
+    background-image: url(https://www.myfoodwifi.com/wp-content/uploads/2018/07/chicken-penne.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 26em;
+    left: 14em;
+    z-index: 3;
+    filter: blur(3px);
+}
+
+.img-4 {
+    position: absolute;
+    width: 14em;
+    height: 14em;
+    background-image: url(https://static.wixstatic.com/media/ad6aad_dcd212ec23a24cbd9cc40d669860c29c~mv2.png/v1/fill/w_480,h_358,al_c,q_85,usm_0.66_1.00_0.01/IMG_20200422_125447-removebg-preview.webp);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 33em;
+    left: 3em;
+    z-index: 3;
+    filter: blur(3px);
+}
+
+@media (min-width: 768px) {
+    .images {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .background-square {
+        position: absolute;
+        width: 212px;
+        height: -webkit-fill-available;
+        background-color: rgba(233, 196, 106, 0.64);
+        z-index: 2;
+        left: 8em;
+        filter: none;
+    }
+
+    .logo-home {
+        position: absolute;
+        width: 10em;
+        height: 10em;
+        background-image: url('/src/styles/assets/images/Logo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 1em;
+        z-index: 3;
+        filter: none;
+    }
+
+    .img-1 {
+        position: absolute;
+        width: 8em;
+        height: 8em;
+        background-image: url(https://gourmet.com.co/wp-content/uploads/2020/04/Toque-Gourmet-Receta-01.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 6em;
+        left: 12em;
+        z-index: 3;
+        filter: none;
+    }
+
+    .img-2 {
+        position: absolute;
+        width: 8em;
+        height: 8em;
+        background-image: url(https://sandersonfarms.com/wp-content/uploads/2017/04/Recipes_Creamy_Chicken_Pasta_Hero_709x758-1.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 14em;
+        left: 3em;
+        z-index: 3;
+        filter: none;
+    }
+
+    .img-3 {
+        position: absolute;
+        width: 8em;
+        height: 8em;
+        background-image: url(https://www.myfoodwifi.com/wp-content/uploads/2018/07/chicken-penne.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 19em;
+        left: 14em;
+        z-index: 3;
+        filter: none;
+    }
+
+    .img-4 {
+        position: absolute;
+        width: 8em;
+        height: 8em;
+        background-image: url(https://static.wixstatic.com/media/ad6aad_dcd212ec23a24cbd9cc40d669860c29c~mv2.png/v1/fill/w_480,h_358,al_c,q_85,usm_0.66_1.00_0.01/IMG_20200422_125447-removebg-preview.webp);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 26em;
+        left: 6em;
+        z-index: 3;
+        filter: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .images {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .background-square {
+        position: absolute;
+        width: 282px;
+        height: -webkit-fill-available;
+        background-color: rgba(233, 196, 106, 0.64);
+        z-index: 2;
+        left: 11em;
+    }
+
+    .logo-home {
+        position: absolute;
+        width: 15em;
+        height: 15em;
+        background-image: url('/src/styles/assets/images/Logo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 1em;
+        z-index: 3;
+    }
+
+    .img-1 {
+        position: absolute;
+        width: 15em;
+        height: 15em;
+        background-image: url(https://gourmet.com.co/wp-content/uploads/2020/04/Toque-Gourmet-Receta-01.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 8em;
+        left: 18em;
+        z-index: 3;
+    }
+
+    .img-2 {
+        position: absolute;
+        width: 15em;
+        height: 15em;
+        background-image: url(https://sandersonfarms.com/wp-content/uploads/2017/04/Recipes_Creamy_Chicken_Pasta_Hero_709x758-1.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 18em;
+        left: 3em;
+        z-index: 3;
+    }
+
+    .img-3 {
+        position: absolute;
+        width: 15em;
+        height: 15em;
+        background-image: url(https://www.myfoodwifi.com/wp-content/uploads/2018/07/chicken-penne.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 28em;
+        left: 18em;
+        z-index: 3;
+    }
+
+    .img-4 {
+        position: absolute;
+        width: 15em;
+        height: 15em;
+        background-image: url(https://static.wixstatic.com/media/ad6aad_dcd212ec23a24cbd9cc40d669860c29c~mv2.png/v1/fill/w_480,h_358,al_c,q_85,usm_0.66_1.00_0.01/IMG_20200422_125447-removebg-preview.webp);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 37em;
+        left: 6em;
+        z-index: 3;
+    }
+}
+
+@media (min-width: 1440px) {
+    .images {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .background-square {
+        position: absolute;
+        width: 282px;
+        height: -webkit-fill-available;
+        background-color: rgba(233, 196, 106, 0.64);
+        z-index: 2;
+        left: 24em;
+    }
+
+    .logo-home {
+        position: absolute;
+        width: 20em;
+        height: 20em;
+        background-image: url('/src/styles/assets/images/Logo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 6em;
+        z-index: 3;
+    }
+
+    .img-1 {
+        position: absolute;
+        width: 236px;
+        height: 236px;
+        background-image: url(https://gourmet.com.co/wp-content/uploads/2020/04/Toque-Gourmet-Receta-01.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 8em;
+        left: 30em;
+        z-index: 3;
+    }
+
+    .img-2 {
+        position: absolute;
+        width: 296px;
+        height: 296px;
+        background-image: url(https://sandersonfarms.com/wp-content/uploads/2017/04/Recipes_Creamy_Chicken_Pasta_Hero_709x758-1.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 18em;
+        left: 11em;
+        z-index: 3;
+    }
+
+    .img-3 {
+        position: absolute;
+        width: 296px;
+        height: 296px;
+        background-image: url(https://www.myfoodwifi.com/wp-content/uploads/2018/07/chicken-penne.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 28em;
+        left: 30em;
+        z-index: 3;
+    }
+
+    .img-4 {
+        position: absolute;
+        width: 296px;
+        height: 296px;
+        background-image: url(https://static.wixstatic.com/media/ad6aad_dcd212ec23a24cbd9cc40d669860c29c~mv2.png/v1/fill/w_480,h_358,al_c,q_85,usm_0.66_1.00_0.01/IMG_20200422_125447-removebg-preview.webp);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 37em;
+        left: 14em;
+        z-index: 3;
+    }
+}

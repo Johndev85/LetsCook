@@ -1,0 +1,58 @@
+@import "../../../styles/assets/modules/globals";
+@import "../../../styles/assets/modules/variables";
+
+.new_method {
+    display: grid;
+    .method_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h3 {
+            display: flex;
+        }
+        select {
+            padding: 0 5px;
+            border: 0.5px solid rgba($color-main, $alpha: 0.25);
+            border-radius: 25px;
+            height: 21px;
+            background-color: $color-btn;
+            color: $color-main;
+            font-weight: 700;
+        }
+    }
+    label {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.75em;
+        height: 40px;
+    }
+    .security_form {
+        display: grid;
+        grid-template: 1fr 1fr/1fr 1fr;
+        & input {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .new_card {
+            display: flex;
+            align-items: center;
+        }
+        .secyrity_from--view {
+            display: flex;
+            align-items: center;
+            padding-right: 5%;
+            height: 41px;
+            border-radius: 25px;
+            border: 0.5px solid rgba($color-main, $alpha: 0.25);
+            background-color: transparent;
+            opacity: 0.75;
+            input {
+                border: none;
+            }
+        }
+    }
+    .add_card {
+        margin: 25px auto 0;
+        width: 50%;
+    }
+}

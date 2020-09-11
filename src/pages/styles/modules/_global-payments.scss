@@ -1,0 +1,14 @@
+@import "../../../styles/assets/modules/globals";
+@import "../../../styles/assets/modules/variables";
+
+.main_payments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.title_method {
+    font-family: $font-titles;
+    font-size: 1.1em;
+}

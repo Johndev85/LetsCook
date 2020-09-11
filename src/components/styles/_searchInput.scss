@@ -1,0 +1,15 @@
+.search__input {
+    width: 230px;
+    height: 33px;
+    padding: 0 35px 0 10px;
+    margin: 0 1rem;
+    border-radius: 13px;
+    border: none;
+    box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.16);
+}
+.search__input--lens {
+    position: relative;
+    right: 50px;
+    opacity: 0.4;
+    color: #9aa0a6;
+}

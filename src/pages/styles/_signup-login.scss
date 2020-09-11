@@ -1,0 +1,218 @@
+@import "../../styles/assets/modules/variables";
+@import "../../styles/assets/modules/globals";
+@import "../../styles/assets/modules/mixins";
+
+/*  VARIABLES SIGNUP     */
+
+$color-border: rgba(0, 0, 0, 0.2);
+
+/*******************************/
+
+.container {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    .right-image {
+        position: relative;
+        z-index: 4;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h2 {
+            position: absolute;
+            z-index: 4;
+            top: 50%;
+            left: 50%;
+            font-size: 3rem;
+            color: $color-light;
+        }
+    }
+}
+
+.container .main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 18rem;
+        }
+        h1 {
+            color: $color-main;
+            text-shadow: black;
+        }
+        span {
+            margin: 10px 0;
+            color: $color-main;
+            font-size: 1rem;
+        }
+        small {
+            margin: 10px;
+        }
+    }
+    &__social {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        a {
+            font-size: 2.5rem;
+        }
+        .fa-facebook {
+            color: #4267b2;
+            &:hover {
+                @include hover-icons;
+            }
+        }
+        .fa-twitter {
+            color: #1da1f2;
+            &:hover {
+                @include hover-icons;
+            }
+        }
+        .fa-google {
+            color: #ee4433;
+            &:hover {
+                @include hover-icons;
+            }
+        }
+    }
+    &__divisor {
+        width: 80%;
+        border-bottom: 1px solid $color-border;
+        margin-bottom: 30px;
+        span {
+            position: relative;
+            bottom: -0.5rem;
+            left: 50%;
+            z-index: 2;
+            padding: 5px;
+            border: 1px solid $color-border;
+            border-radius: 50%;
+            background-color: $color-light;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: $color-main;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__signup {
+            width: 100%;
+            padding: 0 35px;
+            input {
+                width: 100%;
+                padding: 10px 5px;
+                margin-bottom: 15px;
+            }
+        }
+        p {
+            padding: 10px 35px;
+            a {
+                margin-left: 10px;
+                text-decoration: none;
+            }
+        }
+        &--btn {
+            width: 80%;
+            text-align: center;
+            padding: 15px;
+            margin: 15px 0;
+            background-color: $color-btn;
+            color: $color-main;
+            border-radius: 15px;
+            border: none;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+                color: $color-hover;
+                box-shadow: 1px 1px 15px 2px $color-hover;
+            }
+        }
+        &--link {
+            text-decoration: none;
+            color: $color-main;
+            font-weight: 700;
+        }
+    }
+    &__signBtn {
+        width: 50%;
+        padding: 15px;
+        text-align: center;
+        color: $color-btn;
+        border-radius: 15px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 50px 0 0 0;
+        background-color: $color-main;
+        &:hover {
+            cursor: pointer;
+            color: $color-hover;
+            box-shadow: 1px 1px 15px 2px $color-hover;
+        }
+    }
+}
+
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+
+@media screen and (max-width: 768px) {
+    .container {
+        font-size: 14px;
+        height: 100vh;
+    }
+
+    .container .main {
+        padding: 1rem;
+        &__form {
+            form {
+                padding: 0 25px;
+            }
+        }
+        &__signBtn {
+            width: 60%;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .container {
+        font-size: 13px;
+        grid-template: 1fr / 1fr;
+    }
+    .right-image {
+        img {
+            display: none;
+        }
+    }
+
+    .container .main {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        height: 100vh;
+    }
+
+    .container .main {
+        padding: 1.2rem;
+    }
+}

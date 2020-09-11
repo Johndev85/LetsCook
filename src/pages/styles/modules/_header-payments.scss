@@ -1,0 +1,26 @@
+@import "../../../styles/assets/modules/globals";
+@import "../../../styles/assets/modules/variables";
+
+.nav_mobile {
+    margin: 0;
+    padding: 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        a {
+            display: grid;
+            // grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+            span {
+                color: $color-main;
+                font-size: 16px;
+                bottom: 50px;
+            }
+            .logo_payment {
+                height: inherit;
+                // height: 150px;
+                width: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

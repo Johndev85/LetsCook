@@ -1,0 +1,71 @@
+@import "../../styles/assets/modules/globals";
+@import "../../styles/assets/modules/variables";
+@import "../../styles/assets/modules/mixins";
+
+/* -------------------- FOOTER ------------------------- */
+
+.footer {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-main;
+    &__menu {
+        display: flex;
+        justify-content: center;
+        &--links {
+            padding: 1rem;
+            a {
+                margin-right: 4rem;
+                color: $color-btn;
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-decoration: none;
+                &:hover {
+                    border-bottom: 3px solid $color-hover;
+                    color: $color-hover;
+                }
+            }
+        }
+    }
+    &__social {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 0;
+        &--icons {
+            span {
+                color: $color-light;
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-right: 0.7rem;
+            }
+            .fa-facebook {
+                color: $color-light;
+                font-size: 2rem;
+                margin-right: 0.7rem;
+                cursor: pointer;
+                &:hover {
+                    @include hover-icons;
+                }
+            }
+            .fa-instagram {
+                color: $color-light;
+                font-size: 2rem;
+                cursor: pointer;
+                &:hover {
+                    @include hover-icons;
+                }
+            }
+        }
+    }
+    &__bottom {
+        align-self: center;
+        margin: 1rem;
+        &--small {
+            padding: 1rems;
+            color: $color-light;
+            font-weight: 600;
+        }
+    }
+}
