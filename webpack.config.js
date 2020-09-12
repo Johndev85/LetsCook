@@ -1,14 +1,16 @@
 const path = require("path")
 const htmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
 module.exports = {
     entry: {
         entry: "./src/index.jsx",
     },
     output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "js/bundle.js",
+        path: path.resolve(__dirname, "./dist"),
+        filename: "bundle.js",
+        sourceMapFilename: "main.css.map",
     },
     resolve: {
         extensions: [".js", ".jsx"],
@@ -30,14 +32,30 @@ module.exports = {
                 },
             },
             {
-                test: /\.scss$/,
+                test: /\.(css|s[ac]ss)$/,
                 use: [
                     // fallback to style-loader in development
                     process.env.NODE_ENV !== "production"
                         ? "style-loader"
-                        : MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader",
+                        : {
+                              loader: MiniCssExtractPlugin.loader,
+                              options: {
+                                  publicPath: "/dist/main.css",
+                              },
+                          },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 2,
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
                 ],
             },
             {
@@ -64,6 +82,10 @@ module.exports = {
             },
         ],
     },
+    optimization: {
+        minimize: true,
+        minimizer: [new CssMinimizerPlugin()],
+    },
     devServer: {
         historyApiFallback: true,
     },
@@ -75,6 +97,7 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: "./dist/main.css",
+            chunkFilename: "chunk-main.css",
         }),
     ],
 }

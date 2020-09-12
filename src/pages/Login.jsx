@@ -14,10 +14,10 @@ const Login = () => {
                     <form className="main__form__signup" action="">
                         <input type="text" placeholder="User Name" />
                         <input type="password" placeholder="Password" />
+                        <Link className="main__form__signup--btn" to="/profile">
+                            Log in
+                        </Link>
                     </form>
-                    <Link className="main__form--btn" to="/profile">
-                        Log in
-                    </Link>
                     <a className="main__form--link" href="#">
                         Forgot account?
                     </a>

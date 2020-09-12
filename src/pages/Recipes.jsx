@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { CardItem } from "../components/CardItem"
 import Layout from "../components/Layout"
 
-const urlRecipes = "http://161.35.124.63:3000/api/maestro"
 const urlBreakFast = "http://161.35.124.63:3000/api/maestro/type/breakfast"
 const urlLunch = "http://161.35.124.63:3000/api/maestro/type/lunch"
 const urlDinners = "http://161.35.124.63:3000/api/maestro/type/dinner"

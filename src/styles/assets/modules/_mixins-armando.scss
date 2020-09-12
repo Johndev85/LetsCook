@@ -1,5 +1,6 @@
 @import "./globals";
 @import "./variables";
+@import "./mixins";
 
 $color-main: #264653;
 $color-btn: #e9c46a;
@@ -23,7 +24,7 @@ $titleFont: "Roboto Condensed", sans-serif;
     font-size: 18px;
 }
 
-@mixin liTextStyle1024 {
+@mixin liTextStyle768 {
     font-family: $titleFont;
     font-size: 30px;
 }
@@ -32,9 +33,10 @@ $titleFont: "Roboto Condensed", sans-serif;
     text-align: center;
     color: $color-main;
     font-size: 30px;
+    text-transform: uppercase;
 }
 
-@mixin titleStyle1024 {
+@mixin titleStyle768 {
     text-align: center;
     color: $color-main;
     font-size: 50px;
@@ -44,37 +46,37 @@ $titleFont: "Roboto Condensed", sans-serif;
     text-align: center;
     color: $color-main;
     font-size: 25px;
+    text-transform: uppercase;
 }
 
-@mixin subtitleStyle1024 {
+@mixin subtitleStyle768 {
     text-align: center;
     color: $color-main;
-    font-size: 50px;
+    font-size: 2rem;
 }
 
 @mixin ingredientStepStyle {
     width: 100%;
-    height: 90%;
-    background-color: $color-backgroud;
-    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $color-backgroud;
     border-radius: 5px;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 50% 50%;
 }
 
-@mixin ingredientStepStyle1024 {
+@mixin ingredientStepStyle768 {
     width: 95%;
     height: 90%;
-    margin: 0 auto;
+    margin: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     background-color: $color-backgroud;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 50% 50%;
 }
 
 @mixin ingredientsReciepeImagesStyle {
@@ -89,7 +91,7 @@ $titleFont: "Roboto Condensed", sans-serif;
     grid-column: 1/2;
 }
 
-@mixin ingredientsReciepeImagesStyle1024 {
+@mixin ingredientsReciepeImagesStyle768 {
     width: 100px;
     height: 100px;
     background-position: center;
@@ -102,15 +104,14 @@ $titleFont: "Roboto Condensed", sans-serif;
 }
 
 @mixin ingredientNameStyle {
-    width: 100%;
-    height: 100%;
-    margin: 0;
     font-family: $titleFont;
-    font-size: 20px;
     color: $color-main;
+    li {
+        font-size: 1.3rem;
+    }
 }
 
-@mixin ingredientNameStyle1024 {
+@mixin ingredientNameStyle768 {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -128,7 +129,7 @@ $titleFont: "Roboto Condensed", sans-serif;
     color: $color-main;
 }
 
-@mixin ingredientQuantityStyle1024 {
+@mixin ingredientQuantityStyle768 {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -140,34 +141,31 @@ $titleFont: "Roboto Condensed", sans-serif;
 @mixin stepStyle {
     width: 100%;
     height: 100%;
+    padding: 15px;
     background-color: $color-backgroud;
-    box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100%;
 }
 
 @mixin stepStyleParagraph {
-    width: auto;
-    height: 100%;
-    margin-right: 5px;
-    text-align: justify;
-    margin-left: 5px;
     font-family: $textFont;
-    font-size: 15px;
+    font-size: 1.2rem;
     color: $color-main;
+    li {
+        list-style: decimal;
+        list-style-position: inside;
+        text-align: justify;
+    }
 }
 
-@mixin stepStyleParagraph1024 {
+@mixin stepStyleParagraph768 {
     width: auto;
     height: 100%;
     margin-right: 5px;
     text-align: justify;
     margin-left: 5px;
     font-family: $textFont;
-    font-size: 30px;
+    font-size: 1.3rem;
     color: $color-main;
 }
 
@@ -183,39 +181,35 @@ $titleFont: "Roboto Condensed", sans-serif;
 .main-details .main-image {
     width: 100%;
     height: 500px;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .main-image img {
     border-radius: 3%;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 /*------------------------------MAIN INTRODUCTION------------------------------*/
 
 .main-details .main-introduction {
     width: 100%;
-    margin-top: 20px;
-    margin: 0 auto;
+    margin: 40px 0;
+    padding: 15px;
     display: grid;
-    /* grid-template-rows: repeat(5, 20%); */
     grid-template-rows: 17.5% 17.5% 17.5% 30% 17.5%;
     grid-template-columns: repeat(4, 25%);
 }
 
 .main-introduction h1 {
     width: 100%;
+    padding: 20px 0;
     @include titleStyle;
     grid-row: 1/2;
-    grid-column: 2/4;
-    align-self: center;
-}
-
-.main-introduction h2 {
-    width: 100%;
-    @include subtitleStyle;
-    grid-row: 2/3;
     grid-column: 2/4;
     align-self: center;
 }
@@ -241,12 +235,14 @@ $titleFont: "Roboto Condensed", sans-serif;
 
 .main-introduction .main_introduction__time {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
     color: $color-main;
     font-size: 20px;
-    text-align: center;
     grid-row: 3/4;
-    grid-column: 3/4;
-    align-self: center;
+    grid-column: 3/5;
 }
 
 .main-introduction .main-introduction__timerIcon {
@@ -258,10 +254,13 @@ $titleFont: "Roboto Condensed", sans-serif;
     background-size: contain;
 }
 
-.main-introduction p {
+.main-introduction--description {
     width: 100%;
-    height: 100%;
-    margin: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: 10px 0;
     font-size: 20px;
     text-align: justify;
     color: $color-main;
@@ -274,7 +273,7 @@ $titleFont: "Roboto Condensed", sans-serif;
     height: 25px;
     background-image: url(https://i.imgur.com/ZUwFgu0.png);
     background-size: contain;
-    grid-row: 5/6;
+    grid-row: 6/6;
     grid-column: 2/3;
     align-self: center;
     justify-self: center;
@@ -286,7 +285,7 @@ $titleFont: "Roboto Condensed", sans-serif;
     height: 25px;
     background-image: url(https://i.imgur.com/Xm5K9xL.png);
     background-size: contain;
-    grid-row: 5/6;
+    grid-row: 6/6;
     grid-column: 3/4;
     align-self: center;
     justify-self: center;
@@ -299,174 +298,51 @@ $titleFont: "Roboto Condensed", sans-serif;
     width: 80%;
     margin: 0 auto;
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: 100%;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        margin: 15px 0;
+        @include subtitleStyle;
+    }
+}
+
+.main-ingredients .main-ingredients__container1 {
+    @include ingredientStepStyle;
+    ul {
+        padding: 0 15px;
+        li {
+            list-style-type: initial;
+        }
+    }
 }
 
 .main-ingredients .main-ingredients__container1 {
     @include ingredientStepStyle;
 }
 
-.main-ingredients__container1 .main-ingredients__image {
-    background-image: url(https://i.imgur.com/FaeMCS1.jpg);
-    @include ingredientsReciepeImagesStyle;
-}
-
 .main-ingredients__container1 .main-ingredientes__name {
     @include ingredientNameStyle;
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-
-.main-ingredients__container1 .main-ingredients__quantity {
-    @include ingredientQuantityStyle;
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
-.main-ingredients .main-ingredients__container2 {
-    @include ingredientStepStyle;
-}
-
-.main-ingredients__container2 .main-ingredients__image {
-    background-image: url(https://i.imgur.com/pWBcZYu.jpg);
-    @include ingredientsReciepeImagesStyle;
-}
-
-.main-ingredients__container2 .main-ingredientes__name {
-    @include ingredientNameStyle;
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-
-.main-ingredients__container2 .main-ingredients__quantity {
-    @include ingredientQuantityStyle;
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
-.main-ingredients .main-ingredients__container3 {
-    @include ingredientStepStyle;
-}
-
-.main-ingredients__container3 .main-ingredients__image {
-    background-image: url(https://i.imgur.com/Nie87y0.jpg);
-    @include ingredientsReciepeImagesStyle;
-}
-
-.main-ingredients__container3 .main-ingredientes__name {
-    @include ingredientNameStyle;
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-
-.main-ingredients__container3 .main-ingredients__quantity {
-    @include ingredientQuantityStyle;
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
-.main-ingredients .main-ingredients__container4 {
-    @include ingredientStepStyle;
-}
-
-.main-ingredients__container4 .main-ingredients__image {
-    background-image: url(https://i.imgur.com/oshniVt.jpg);
-    @include ingredientsReciepeImagesStyle;
-}
-
-.main-ingredients__container4 .main-ingredientes__name {
-    @include ingredientNameStyle;
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-
-.main-ingredients__container4 .main-ingredients__quantity {
-    @include ingredientQuantityStyle;
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
-.main-ingredients .main-ingredients__container5 {
-    @include ingredientStepStyle;
-}
-
-.main-ingredients__container5 .main-ingredients__image {
-    background-image: url(https://i.imgur.com/QVQg69D.jpg);
-    @include ingredientsReciepeImagesStyle;
-}
-
-.main-ingredients__container5 .main-ingredientes__name {
-    @include ingredientNameStyle;
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-
-.main-ingredients__container5 .main-ingredients__quantity {
-    @include ingredientQuantityStyle;
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
-.main-ingredients .main-ingredients__container6 {
-    @include ingredientStepStyle;
-}
-
-.main-ingredients__container6 .main-ingredients__image {
-    background-image: url(https://i.imgur.com/eq2wjLQ.jpg);
-    @include ingredientsReciepeImagesStyle;
-}
-
-.main-ingredients__container6 .main-ingredientes__name {
-    @include ingredientNameStyle;
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-
-.main-ingredients__container6 .main-ingredients__quantity {
-    @include ingredientQuantityStyle;
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
-.main-ingredients .main-ingredients__container7 {
-    @include ingredientStepStyle;
-}
-
-.main-ingredients__container7 .main-ingredients__image {
-    background-image: url(https://i.imgur.com/PCue0dC.jpg);
-    @include ingredientsReciepeImagesStyle;
-}
-
-.main-ingredients__container7 .main-ingredientes__name {
-    @include ingredientNameStyle;
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-
-.main-ingredients__container7 .main-ingredients__quantity {
-    @include ingredientQuantityStyle;
 }
 
 .main-details .main-steps {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 20px;
-    display: grid;
-    gap: 15px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.main-steps h1 {
-    width: 100%;
-    @include titleStyle;
+.main-steps h2 {
+    margin: 15px 0;
+    @include subtitleStyle;
 }
 
 .main-steps .main-steps__container {
     @include stepStyle;
 }
 
-.main-steps__container p {
+.main-steps__container ol {
     @include stepStyleParagraph;
 }
 
@@ -477,13 +353,12 @@ $titleFont: "Roboto Condensed", sans-serif;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-}
-
-.main-rate h1 {
-    margin-top: 0;
-    width: 100%;
-    @include titleStyle;
-    text-align: center;
+    h2 {
+        margin-top: 0;
+        width: 100%;
+        @include subtitleStyle;
+        text-align: center;
+    }
 }
 
 .main-rate .main-rate__icons {
@@ -513,84 +388,65 @@ $titleFont: "Roboto Condensed", sans-serif;
 }
 
 .main-addTo button {
-    width: 60%;
-    height: 50px;
-    margin: 0 auto;
-    border: transparent;
-    outline: none;
-    border-radius: 15px;
-    background-color: $color-btn;
-    color: $color-main;
-    font-family: $textFont;
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    @include btn-text-format;
+    @include btn-styles;
+    &:hover {
+        @include hover-btn;
+    }
 }
 
-.main-addTo button:hover {
-    background-color: $color-hover;
-    color: $color-light;
-    border: 1px solid black;
-}
+/*------------------------------RESPONSIVE------------------------------*/
 
-@media screen and (max-width: 1024px) {
-    .header-details {
-        width: 100%;
-        height: 100px;
-    }
-    .header-container .header-container__image {
-        height: 100%;
-    }
-    .header-container .header-container__search {
-        @include liTextStyle1024;
-    }
-    .header-container .header-container__explore {
-        @include liTextStyle1024;
-    }
-    .header-container .header-container__faq {
-        @include liTextStyle1024;
-    }
-    .header-container .header-container__userName {
-        @include liTextStyle1024;
-    }
-    .header-container .header-container__icon {
-        width: 30px;
-        height: 25px;
-    }
+@media screen and (max-width: 768px) {
     .main-details {
-        width: 100%;
-        margin: 0 auto;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        padding: 20px;
+        grid-template-rows: 17.5% 17.5% 17.5% 15% 17.5% 15%;
+        align-items: center;
     }
     .main-details .main-image {
         width: 100%;
         height: 50%;
-        margin-top: 10px;
+        margin-top: 30px;
     }
     .main-introduction h1 {
-        @include subtitleStyle1024;
+        @include subtitleStyle768;
     }
     .main-introduction h2 {
-        @include subtitleStyle1024;
+        @include subtitleStyle768;
     }
     .main-introduction .main_introduction__people {
-        font-size: 40px;
+        font-size: 1.8rem;
+        text-align: left;
     }
     .main-introduction .main-introduction__peopleIcon {
         width: 30px;
         height: 30px;
     }
     .main-introduction .main_introduction__time {
-        font-size: 40px;
+        justify-content: start;
+        font-size: 2rem;
+        padding: 0 20px;
     }
     .main-introduction .main-introduction__timerIcon {
         width: 30px;
         height: 30px;
     }
-    .main-introduction p {
-        width: 90%;
-        margin: 0 auto;
-        font-size: 35px;
+    .main-introduction--description {
+        width: 100%;
+        height: 100%;
+        p {
+            height: 100%;
+            padding: 20px;
+            font-size: 1.6rem;
+        }
     }
+
     .main-introduction .main-introduction__loveIcon {
         width: 40px;
         height: 40px;
@@ -600,175 +456,41 @@ $titleFont: "Roboto Condensed", sans-serif;
         height: 40px;
     }
     .main-details .main-ingredients {
-        width: 95%;
+        width: 90%;
     }
     .main-ingredients .main-ingredients__container1 {
-        @include ingredientStepStyle1024;
+        @include ingredientStepStyle768;
     }
     .main-ingredients__container1 .main-ingredients__image {
-        @include ingredientsReciepeImagesStyle1024;
+        @include ingredientsReciepeImagesStyle768;
     }
     .main-ingredients__container1 .main-ingredientes__name {
-        @include ingredientNameStyle1024;
+        @include ingredientNameStyle768;
     }
     .main-ingredients__container1 .main-ingredients__quantity {
-        @include ingredientQuantityStyle1024;
-    }
-    .main-ingredients .main-ingredients__container2 {
-        @include ingredientStepStyle1024;
-    }
-    .main-ingredients__container2 .main-ingredients__image {
-        @include ingredientsReciepeImagesStyle1024;
-    }
-    .main-ingredients__container2 .main-ingredientes__name {
-        @include ingredientNameStyle1024;
-    }
-    .main-ingredients__container2 .main-ingredients__quantity {
-        @include ingredientQuantityStyle1024;
-    }
-    .main-ingredients .main-ingredients__container3 {
-        @include ingredientStepStyle1024;
-    }
-    .main-ingredients__container3 .main-ingredients__image {
-        @include ingredientsReciepeImagesStyle1024;
-    }
-    .main-ingredients__container3 .main-ingredientes__name {
-        @include ingredientNameStyle1024;
-    }
-    .main-ingredients__container3 .main-ingredients__quantity {
-        @include ingredientQuantityStyle1024;
-    }
-    .main-ingredients .main-ingredients__container4 {
-        @include ingredientStepStyle1024;
-    }
-    .main-ingredients__container4 .main-ingredients__image {
-        @include ingredientsReciepeImagesStyle1024;
-    }
-    .main-ingredients__container4 .main-ingredientes__name {
-        @include ingredientNameStyle1024;
-    }
-    .main-ingredients__container4 .main-ingredients__quantity {
-        @include ingredientQuantityStyle1024;
-    }
-    .main-ingredients .main-ingredients__container5 {
-        @include ingredientStepStyle1024;
-    }
-    .main-ingredients__container5 .main-ingredients__image {
-        @include ingredientsReciepeImagesStyle1024;
-    }
-    .main-ingredients__container5 .main-ingredientes__name {
-        @include ingredientNameStyle1024;
-    }
-    .main-ingredients__container5 .main-ingredients__quantity {
-        @include ingredientQuantityStyle1024;
-    }
-    .main-ingredients .main-ingredients__container6 {
-        @include ingredientStepStyle1024;
-    }
-    .main-ingredients__container6 .main-ingredients__image {
-        @include ingredientsReciepeImagesStyle1024;
-    }
-    .main-ingredients__container6 .main-ingredientes__name {
-        @include ingredientNameStyle1024;
-    }
-    .main-ingredients__container6 .main-ingredients__quantity {
-        @include ingredientQuantityStyle1024;
-    }
-    .main-ingredients .main-ingredients__container7 {
-        @include ingredientStepStyle1024;
-    }
-    .main-ingredients__container7 .main-ingredients__image {
-        @include ingredientsReciepeImagesStyle1024;
-    }
-    .main-ingredients__container7 .main-ingredientes__name {
-        @include ingredientNameStyle1024;
-    }
-    .main-ingredients__container7 .main-ingredients__quantity {
-        @include ingredientQuantityStyle1024;
+        @include ingredientQuantityStyle768;
     }
     .main-details .main-steps {
         width: 90%;
     }
     .main-steps h1 {
-        @include titleStyle1024;
+        @include titleStyle768;
     }
-    .main-steps__container p {
-        @include stepStyleParagraph1024;
+    .main-steps__container ol {
+        @include stepStyleParagraph768;
     }
     .main-rate h1 {
-        @include titleStyle1024;
+        @include titleStyle768;
     }
     .main-rate__icons a {
         width: 60px;
         height: 60px;
     }
-    .main-addTo button {
-        width: 80%;
-        height: 100%;
-        margin: 0 auto;
-        border: transparent;
-        outline: none;
-        border-radius: 15px;
-        background-color: $color-btn;
-        color: $color-main;
-        font-family: $textFont;
-        font-size: 50px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
 }
 
 @media screen and (max-width: 375px) {
-    .header-details {
-        width: 100%;
-        height: 50px;
-        background-color: $color-light;
-        margin: 0;
-        padding: 0;
-    }
-    nav .header-container {
-        width: 100%;
-        height: inherit;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        grid-template-columns: 20% 80%;
-        align-items: center;
-        justify-items: center;
-    }
-    .header-container .header-container__image {
-        @include liImagesStyle;
-        background-image: url(https://i.imgur.com/QBfmhPH.png);
-        grid-column: 1/2;
-    }
-    .header-container .header-container__search,
-    .header-container__explore,
-    .header-container__faq,
-    .header-container__userName {
-        display: none;
-    }
-    .header-container .header-container__icon {
-        width: 50%;
-        height: 25px;
-        cursor: pointer;
-        background-image: url(https://i.imgur.com/KBgdLuE.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        grid-column: 2/3;
-    }
-    .header-container a {
-        display: none;
-    }
-    .main-details {
-        width: 100%;
-        margin: 0 auto;
-    }
     .main-details .main-image {
-        width: 100%;
-        height: 50%;
-        margin-top: 10px;
+        width: 80%;
     }
     .main-details .main-introduction {
         width: 100%;
@@ -777,39 +499,36 @@ $titleFont: "Roboto Condensed", sans-serif;
         display: grid;
         grid-template-rows: 16.25% 16.25% 16.25% 35% 16.25%;
         grid-template-columns: repeat(4, 25%);
+        align-items: center;
+        h1 {
+            grid-row: 1/2;
+            grid-column: 2/4;
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
     }
-    .main-introduction h2 {
-        width: 100%;
-        @include subtitleStyle;
-        grid-row: 2/3;
-        grid-column: 1/5;
-        align-self: center;
+
+    .main_introduction__time p {
+        font-size: 1.2rem;
     }
-    .main-introduction p {
-        width: 96%;
-        height: 100%;
-        margin: 0 auto;
-        font-size: 20px;
-        text-align: justify;
-        color: $color-main;
-        grid-row: 4/5;
-        grid-column: 1/5;
+
+    .main-introduction--description p {
+        font-size: 1.2rem;
     }
     .main-details .main-ingredients {
         width: 95%;
+        margin-top: 40px;
     }
     .main-details .main-steps {
         width: 95%;
         margin-top: 10px;
     }
-    .main-details .main-addTo {
-        width: 80%;
-        height: 100%;
-        margin: 0 auto;
-        margin-top: 5px;
-        margin-bottom: 10%;
+
+    .main-steps__container ol {
+        font-size: 1rem;
     }
+
     .main-addTo button {
-        width: 80%;
+        margin: 1rem;
     }
 }

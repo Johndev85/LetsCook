@@ -17,7 +17,13 @@ export const CardItem = (url) => {
             return (
                 <Link
                     className="main__carousel__cards__item"
-                    to="/recipe-details"
+                    to={{
+                        pathname: `/recipe-detail/${recipe.des_name}`,
+                        state: {
+                            idRecipe: recipe.num_id,
+                            listRecipes: recipes,
+                        },
+                    }}
                 >
                     <div className="main__carousel__cards__item--img">
                         <img

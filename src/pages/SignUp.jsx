@@ -31,19 +31,19 @@ const SignUp = () => {
                     <span>or</span>
                 </div>
                 <section className="main__form">
-                    <form className="main__form__signup" action="">
+                    <form className="main__form__signup">
                         <input type="text" placeholder="Full Name" />
                         <input type="text" placeholder="Email Address" />
                         <input type="text" placeholder="Password" />
                         <input type="text" placeholder="Confirm Password" />
+                        <p className="main__form__signup--p">
+                            By creating an account, you agree to our Terms of
+                            Use and privacy policy
+                        </p>
+                        <Link className="main__form__signup--btn" to="#">
+                            Sign Up
+                        </Link>
                     </form>
-                    <p>
-                        By creating an account, you agree to our Terms of Use
-                        and privacy policy
-                    </p>
-                    <Link className="main__form--btn" to="#">
-                        Sign Up
-                    </Link>
                     <p>
                         Already have an account?<Link to="/login">Log in</Link>
                     </p>

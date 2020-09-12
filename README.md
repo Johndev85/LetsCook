@@ -1,4 +1,6 @@
-![letscook logo](https://i.imgur.com/xksld8G.png "letscook logo")
+<center>
+
+![letscook logo](https://i.imgur.com/kjBXVvE.png "letscook logo")
 
 ![](https://img.shields.io/github/stars/Food-Market/letscook) ![](https://img.shields.io/github/forks/Food-Market/letscook)
 ![GitHub](https://img.shields.io/github/license/Food-Market/LetsCook?color=%232a9d8f)
@@ -6,13 +8,23 @@
 
 # 🍛🥗 Lets Cook - Food Market 👩‍🍳👨‍🍳
 
+  </center>
+
 It Is a website for gastronomy passionates that don't have time to buy the products for their preparations.
 
 The startup offers attractive subscriptions plans, great customer service and a high quality in the products.
 
-**SITE:** http://letscook.shop
+**SITE:**
 
-_Link imagen demo_
+### http://app-letscook.herokuapp.com/
+
+<center>
+
+![Previe-imagen](https://i.imgur.com/gtQVQGM.png)
+
+</center>
+
+---
 
 ## 🎯 Objectives
 
@@ -48,42 +60,62 @@ npm install
 4. Run development enviroment.
 
 ```bash
-npm run build
+npm run start
 ```
 
 ---
 
-_Api - descripcion_
+## Api - Descripcion
+
+-   Endpont Recipes: "http://161.35.124.63:3000/api/maestro"
+-   Endpont BreakFast: "http://161.35.124.63:3000/api/maestro/type/breakfast"
+-   Endpont Lunch: "http://161.35.124.63:3000/api/maestro/type/lunch"
+-   Endpont Dinners: "http://161.35.124.63:3000/api/maestro/type/dinner"
 
 ---
 
 ## 🛠 Deployment
 
-Por definir
+-   GitHub main repository:
+
+    #### [https://github.com/Food-Market/LetsCook/](https://github.com/Food-Market/LetsCook/)
+
+-   Heroku
 
 ---
 
 ## 🧾 License
 
-The MIT License (MIT)
+-   The MIT License (MIT)
+
+---
 
 ## ➕ Contributing
 
 If you want to contribute with this project, just make a Pull Request explaining the improving ✨.
+
+---
 
 ## 💻 Technologies:
 
 -   HTML5
 -   CSS3 - SASS
 -   JavaScript
--   SPA
+    React
+-   Router - SPA
 
 ---
 
 ## 🚧 Test
 
-## _Pruebas description_
+### _Pruebas description_
+
+Still no implementation. Project under development
+
+---
 
 ## 🤝 Gratefulness
 
-pendiente
+A joint effort of the Platzi Master colleagues, carrying out their first group project. Thanks to the constant support of Cohort 4 mentors.
+
+---

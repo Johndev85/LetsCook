@@ -109,39 +109,44 @@ $color-border: rgba(0, 0, 0, 0.2);
         align-items: center;
         justify-content: center;
         &__signup {
-            width: 100%;
-            padding: 0 35px;
+            width: 90%;
+            padding: 0 25px;
+            display: inherit;
+            flex-direction: inherit;
+            align-items: inherit;
+            justify-content: inherit;
             input {
                 width: 100%;
                 padding: 10px 5px;
                 margin-bottom: 15px;
             }
-        }
-        p {
-            padding: 10px 35px;
-            a {
-                margin-left: 10px;
+            &--p {
+                padding: 10px 35px;
+            }
+            &--btn {
+                width: 80%;
+                text-align: center;
+                padding: 15px;
+                margin: 15px 0;
+                background-color: $color-btn;
+                color: $color-main;
+                border-radius: 15px;
+                border: none;
                 text-decoration: none;
+                font-size: 1.2rem;
+                font-weight: 700;
+                &:hover {
+                    cursor: pointer;
+                    color: $color-hover;
+                    box-shadow: 1px 1px 15px 2px $color-hover;
+                }
             }
         }
-        &--btn {
-            width: 80%;
-            text-align: center;
-            padding: 15px;
-            margin: 15px 0;
-            background-color: $color-btn;
-            color: $color-main;
-            border-radius: 15px;
-            border: none;
+        a {
+            margin-left: 10px;
             text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 700;
-            &:hover {
-                cursor: pointer;
-                color: $color-hover;
-                box-shadow: 1px 1px 15px 2px $color-hover;
-            }
         }
+
         &--link {
             text-decoration: none;
             color: $color-main;
@@ -149,13 +154,13 @@ $color-border: rgba(0, 0, 0, 0.2);
         }
     }
     &__signBtn {
-        width: 50%;
+        width: 70%;
         padding: 15px;
         text-align: center;
         color: $color-btn;
         border-radius: 15px;
         text-decoration: none;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 700;
         margin: 50px 0 0 0;
         background-color: $color-main;

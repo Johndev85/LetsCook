@@ -1,7 +1,7 @@
-// MIXINS
+/*MIXINS */
 @import "./assets/modules/mixins";
 @import "./assets/modules/mixins-armando";
-// COMPONENTS
+/* COMPONENTS */
 @import "../components/styles/header";
 @import "../components/styles/footer";
 @import "../components/styles/headerHomeSection";
@@ -10,14 +10,14 @@
 @import "../components/styles/imagesHome";
 @import "../components/styles/item";
 @import "../components/styles/searchInput";
-// PAGES
+/* PAGES */
 @import "../pages/styles/mainRecipes";
 @import "../pages/styles/signup-login";
 @import "../pages/styles/orderChecked";
 @import "../pages/styles/orderConfirmation";
 @import "../pages/styles/Profile";
 @import "../pages/styles/errorPage";
-// MODULES
+/*  MODULES */
 @import "../pages/styles/payments";
 @import "./assets/modules/variables";
 @import "./assets/modules/globals";

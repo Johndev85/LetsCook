@@ -19,7 +19,6 @@ function useRecipes({ url }) {
                 }
             )
     }, [])
-
     return [recipes, isLoaded, error]
 }
 

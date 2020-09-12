@@ -24,9 +24,10 @@
 
 @mixin btn-styles {
     text-align: center;
-    transition: 450ms ease-in;
+    transition: 350ms ease-in;
     margin: 3rem;
     padding: 1.3rem;
     background-color: $color-btn;
-    border-radius: 5px;
+    border-radius: 25px;
+    cursor: pointer;
 }
